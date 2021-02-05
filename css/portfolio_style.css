@@ -2,6 +2,7 @@
   --primary-text-color: #757575;
   --title-text-color: #000000;
   --hover-text-color: #2196f3;
+  --accent-text-color: #ffffff;
   --big-space: 94px;
   --betw-space: 30px;
 }
@@ -79,6 +80,7 @@ img {
   outline: none;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  opacity: 1;
 }
 
 .example-title {
@@ -96,4 +98,39 @@ img {
 
 .example:not(:nth-last-child(-n + 3)) {
   margin-bottom: var(--betw-space);
+}
+.card-thumb {
+  position: relative;
+}
+
+.hidden-text::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 63px 24px;
+  color: var(--accent-text-color);
+  font-size: 18px;
+  line-height: 1.56;
+  opacity: 0;
+}
+.hidden-text {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 63px 24px;
+  color: var(--accent-text-color);
+  font-size: 18px;
+  line-height: 1.56;
+}
+
+.hidden-text:hover::before {
+  opacity: 1;
 }

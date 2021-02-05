@@ -48,6 +48,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  padding-top: 80px;
 }
 .container {
   width: 1200px;
@@ -64,10 +65,15 @@ body {
 /* Navigation */
 
 .navigation {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  top: 0;
+  left: 0;
   text-align: center;
   font-weight: 500;
   letter-spacing: 0.02em;
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 
 .manu-container {
