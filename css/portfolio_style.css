@@ -102,37 +102,28 @@ img {
 /* работает но не на всю карточку */
 .card-thumb {
   position: relative;
+  overflow: hidden;
 }
 
-.card-thumb::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
-  opacity: 0;
-}
 .hidden-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
 
   padding: 63px 24px;
   height: 100%;
   width: 100%;
+
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+
+  background-color: rgba(33, 150, 243, 0.9);
   color: var(--accent-text-color);
   font-size: 18px;
   line-height: 1.56;
-  opacity: 0;
 }
 
-.card-thumb:hover::before,
-.hidden-text:hover {
-  opacity: 1;
+.shadow-link:hover .card-thumb,
+.shadow-link:focus .card-thumb {
+  transform: translateY(0);
 }
-
-/* .shadow-link:hover > .card-thumb::before,
-.shadow-link:focus::before {
-  opacity: 1;
-} */
