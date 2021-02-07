@@ -8,6 +8,7 @@
   --big-space: 94px;
   --betw-space: 30px;
   --menu-space: 32px;
+  --transition-menu: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -78,7 +79,7 @@ body {
   display: block;
   padding-top: var(--menu-space);
   padding-bottom: var(--menu-space);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-menu);
 }
 
 .menu-item {
@@ -114,6 +115,7 @@ body {
 .tel,
 .tel:visited {
   color: var(--primary-text-color);
+  transition: var(--transition-menu);
 }
 .tel {
   display: flex;
@@ -162,6 +164,8 @@ body {
   padding-top: 24px;
   padding-bottom: 25px;
   margin-right: 93px;
+
+  animation-duration: 250ms;
 }
 
 /* HERO */
@@ -358,6 +362,8 @@ h2 {
   height: 44px;
   width: 44px;
   border-radius: 50%;
+
+  transition: var(--transition-menu);
 }
 
 .social-list-icon {
@@ -397,6 +403,8 @@ h2 {
   justify-content: center;
   width: 100%;
   height: 90px;
+
+  transition: var(--transition-menu);
 }
 .regular-customer-icon {
   fill: var(--fill-icon);
@@ -475,6 +483,7 @@ h2 {
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: var(--transition-menu);
 }
 .social-contacts-icon {
   width: 20px;
