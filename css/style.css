@@ -97,6 +97,7 @@ body {
   border-radius: 2px;
   background-color: var(--hover-text-color);
   outline: var(--hover-text-color);
+  margin-bottom: -1px;
 }
 
 .menu-item:not(:last-child) {
